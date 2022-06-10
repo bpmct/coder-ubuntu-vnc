@@ -1,0 +1,15 @@
+apps:
+  - name: Ubuntu Desktop
+    scheme: http
+    port: 80
+    host: "localhost"
+    working-directory: /
+    icon-path: /coder/apps/img/ubuntu.png
+    command: /bin/bash
+    args: ["sudo", "USER=coder", "/startup.sh"]
+    health-check:
+      http:
+        scheme: "http"
+        host: "localhost"
+        port: 80
+        path: "/api/state"

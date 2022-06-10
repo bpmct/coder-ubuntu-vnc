@@ -1,0 +1,5 @@
+#!/bin/sh
+
+touch /root/startup.log
+systemctl disable nginx
+systemctl stop nginx
